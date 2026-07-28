@@ -1,13 +1,13 @@
-# @asd/ui
+# @parentco/ui
 
 The design system for **data-dense developer tools** — dense tables, mono data
 idioms, status systems, hairline aesthetics. An independent product; its first
 and hardest-working consumer is the [Sendzila](https://sendzila.com) dashboard.
 
-> Parent-brand codename `asd` — package and repo rename at LLC registration.
+> Parent-brand codename `parentco` — package and repo take the real brand name at naming time; the placeholder never publishes.
 
 ```bash
-npm install @asd/ui
+npm install @parentco/ui
 ```
 
 ## What makes it different
@@ -19,7 +19,7 @@ npm install @asd/ui
 - **Token-contract theming.** Components consume token *names*
   (`--color-brand`, `--color-edge`, `--radius-control`…); redefine the values
   and the whole system reskins. A neutral default theme ships in the box
-  (`@asd/ui/default-theme.css`).
+  (`@parentco/ui/default-theme.css`).
 - **No locked strings.** Every user-facing string is a prop — localize in any
   framework, any language.
 - **A11y as a floor, not a feature.** WCAG 2.2 AA: real tablist/radiogroup
@@ -29,15 +29,15 @@ npm install @asd/ui
 ## Use
 
 ```tsx
-import { Button, Tabs, TableSkeleton, ErrorState } from "@asd/ui";
-import "@asd/ui/default-theme.css"; // or your own token values
-import "@asd/ui/ui.css";
+import { Button, Tabs, TableSkeleton, ErrorState } from "@parentco/ui";
+import "@parentco/ui/default-theme.css"; // or your own token values
+import "@parentco/ui/ui.css";
 ```
 
 Tailwind v4 consumers: add `@source` for the package so utilities compile:
 
 ```css
-@source "../node_modules/@asd/ui/src";
+@source "../node_modules/@parentco/ui/src";
 ```
 
 ## Component workshop
