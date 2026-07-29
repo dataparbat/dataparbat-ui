@@ -1,4 +1,5 @@
 export { HouseBar, StaffBar } from "./house-bar";
+export { OrgSwitcher } from "./org-switcher";
 export type {
   AccountMenuItem,
   ChromeLabels,
