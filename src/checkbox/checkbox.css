@@ -1,0 +1,33 @@
+/* @dataparbat/ui — checkbox (canvas F form family): 15px, drawn glyph. */
+.dp-chk {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+  cursor: pointer;
+}
+.dp-chk > input[type="checkbox"] {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  border-radius: var(--radius-control);
+  border: 1px solid var(--color-line-strong);
+  background: var(--color-surface);
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+.dp-chk > input[type="checkbox"]:checked {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+.dp-chk > input[type="checkbox"]:checked::before {
+  content: "";
+  width: 8px;
+  height: 5px;
+  border-left: 2px solid var(--color-on-accent);
+  border-bottom: 2px solid var(--color-on-accent);
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+.dp-chk > input[disabled] { opacity: 0.45; cursor: not-allowed; }

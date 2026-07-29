@@ -1,0 +1,19 @@
+/* @dataparbat/ui — meter (ruling 29): a 5px bar on the viz-ghost track.
+   Native <progress> so the fill needs no inline style and semantics come
+   free; styled per engine. */
+.dp-meter {
+  appearance: none;
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: 5px;
+  border: 0;
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--color-viz-ghost);
+}
+.dp-meter::-webkit-progress-bar { background: var(--color-viz-ghost); border-radius: 3px; }
+.dp-meter::-webkit-progress-value { background: var(--color-accent); }
+.dp-meter::-moz-progress-bar { background: var(--color-accent); }
+.dp-meter.dp-warn::-webkit-progress-value { background: var(--color-warn); }
+.dp-meter.dp-warn::-moz-progress-bar { background: var(--color-warn); }

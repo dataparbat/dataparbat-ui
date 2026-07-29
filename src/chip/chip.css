@@ -1,0 +1,43 @@
+/* @dataparbat/ui — key:value mode chips (canvas F). State rides the dot:
+   live = accent circle, test = warn square, preview = dashed ring. */
+.dp-chip {
+  display: inline-flex;
+  align-items: stretch;
+  font: 400 10.5px var(--font-mono);
+  letter-spacing: 0.01em;
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-control);
+  overflow: hidden;
+}
+.dp-chip .dp-ck {
+  padding: 2.5px 6px;
+  background: var(--color-surface-2);
+  color: var(--color-ink-3);
+  border-right: 1px solid var(--color-line);
+}
+.dp-chip .dp-cv {
+  padding: 2.5px 7px;
+  color: var(--color-ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.dp-chip .dp-cv::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-viz-neutral);
+}
+.dp-chip.dp-live .dp-cv { color: var(--color-accent-ink); }
+.dp-chip.dp-live .dp-cv::before { background: var(--color-accent); }
+.dp-chip.dp-test .dp-cv { color: var(--color-warn); }
+.dp-chip.dp-test .dp-cv::before { background: var(--color-warn); border-radius: 1px; }
+.dp-chip.dp-preview { border-style: dashed; }
+.dp-chip.dp-preview .dp-cv::before {
+  background: transparent;
+  border: 1.2px solid var(--color-viz-neutral);
+  width: 4px;
+  height: 4px;
+}
+.dp-chip.dp-plain .dp-cv::before { display: none; }

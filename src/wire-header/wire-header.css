@@ -1,0 +1,17 @@
+/* @dataparbat/ui — the wire-header idiom (canvas F): every section eyebrow
+   is a lowercase mono key:value, the RFC-5322 voice. One per surface. */
+.dp-wire {
+  font: 400 11px/1.4 var(--font-mono);
+  letter-spacing: 0.01em;
+  color: var(--color-ink-2);
+}
+.dp-wire b { font-weight: 400; color: var(--color-accent-ink); }
+.dp-wire::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 1px;
+  background: var(--color-line-strong);
+  vertical-align: middle;
+  margin-right: 8px;
+}

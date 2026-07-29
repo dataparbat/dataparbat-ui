@@ -3,6 +3,7 @@ import { useRef, useState, type ReactNode } from "react";
 import { cx } from "../cx";
 import { useClickOutside } from "../hooks/use-click-outside";
 import { useEscape } from "../hooks/use-escape";
+import { DotsIcon, SearchIcon } from "../icons/icons";
 
 /* The table toolbar — conventional on purpose (canvas F): search scoped by
    its placeholder, a Filter button, applied filters as removable key:value
@@ -29,10 +30,7 @@ export function SearchBox({
 }) {
   return (
     <label className="dp-sbox">
-      <svg viewBox="0 0 16 16" aria-hidden>
-        <circle cx="6.75" cy="6.75" r="4.25" />
-        <path d="M9.9 9.9 L14 14" />
-      </svg>
+      <SearchIcon />
       <input
         value={value}
         onChange={(event) => onChange(event.target.value)}
@@ -97,11 +95,7 @@ export function OverflowMenu({
   return (
     <div className="dp-rowmenu" ref={ref}>
       <IconButton label={label} aria-expanded={open} onClick={() => setOpen(!open)}>
-        <svg viewBox="0 0 16 16" aria-hidden>
-          <circle cx="3" cy="8" r="1.1" fill="currentColor" stroke="none" />
-          <circle cx="8" cy="8" r="1.1" fill="currentColor" stroke="none" />
-          <circle cx="13" cy="8" r="1.1" fill="currentColor" stroke="none" />
-        </svg>
+        <DotsIcon />
       </IconButton>
       {open && (
         <div role="menu" className="dp-menu" onClick={() => setOpen(false)}>

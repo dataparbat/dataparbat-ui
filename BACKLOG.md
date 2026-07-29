@@ -65,33 +65,19 @@ Tasks:
 
 - [x] **DataTable** — built 2026-07-29 (`src/data-table/`): column roles, 34px rows, suffix idiom, sort/selection/focus rules, warn/crit rows, honest footer, Nil voice.
 - [x] **TableToolbar** — built 2026-07-29: search box, filter tokens, icon button, overflow menu (click-outside + escape via shared hooks).
-- [ ] **WireHeader** — the signature idiom: lowercase mono key:value
-      eyebrow with the 14px dash. One per surface, exactly.
-- [ ] **Chip (wchip)** — key:value mode chips: mono 10.5, split key/value
-      cells, state dot (live=accent circle, test=warn square,
-      preview=dashed border + ring dot).
-- [ ] **Checkbox / Radio / Switch** — 15px controls, 2px/50% radius,
-      accent checked states, drawn glyphs (no native appearance); switch
-      32×18, 12px knob, 120ms.
-- [ ] **SegmentedControl** — 26–28px, mono labels, live/test pressed
-      washes (accent-wash / warn-wash).
-- [ ] **Toast** — min-height 44px, surface + line-strong + overlay-shadow,
-      mono counter slot.
-- [ ] **Tooltip** — ink-on-ink-inverse (p-ink bg, p-bg text), 11.5px, 7px
-      offset; also the `gated` pattern (ruling 6): a role-gated control is
-      VISIBLE, disabled, reason attached on hover/focus-within.
-- [ ] **Banner** — inline page-level notice, warn variant.
+- [x] **WireHeader** — `src/wire-header/`. (2026-07-29)
+- [x] **Chip** — `src/chip/`, live/test/preview/plain states. (2026-07-29)
+- [x] **Checkbox / Radio / Switch** — drawn 15px controls, 32×18 switch. (2026-07-29)
+- [x] **SegmentedControl** — live/test pressed washes. (2026-07-29)
+- [x] **Toast** — the artifact; queueing is the app's. (2026-07-29)
+- [x] **Tooltip + Gated** — incl. the ruling-6 pattern. (2026-07-29)
+- [x] **Banner** — note/warn. (2026-07-29)
 - [x] **Kbd** — `.dp-kbd` in base. (2026-07-29)
-- [ ] **Meter** — 5px bar, viz-ghost track, accent fill, warn variant
-      (ruling 29).
-- [ ] **CommandPalette** — 560px, grouped items, inset 2px accent bar on
-      active row, ⌘K affordance.
-- [ ] **Link** — body link: accent-ink, underline offset 2, thickness 1→2
-      on hover; quiet link: ink, underline on hover only.
-- [ ] **Badge (lifecycle)** — GA/Preview/Internal/Sunset treatments (mono
-      10, wash + border in the semantic family; internal uses staff family).
-- [ ] **Icons** — 16px grid, 1.5 stroke, square caps, miter joins, fill
-      none. Establish the set with search/dots/close first.
+- [x] **Meter** — native <progress>, no inline styles. (2026-07-29)
+- [x] **CommandPalette** — presentational, listbox semantics. (2026-07-29)
+- [x] **Link** — a.dp-link / a.dp-quiet-link in base. (2026-07-29)
+- [x] **Badge** — GA/Preview/Internal/Sunset. (2026-07-29)
+- [x] **Icons** — grammar established (`src/icons/`): search/dots/close. (2026-07-29)
 
 ## 4. Explicit non-goals (shell furniture stays in the console app)
 

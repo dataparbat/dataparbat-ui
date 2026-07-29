@@ -1,0 +1,16 @@
+/* @dataparbat/ui — toast (canvas F): one surface, one shadow, a mono
+   counter slot. Queueing is the app's job; this is the artifact. */
+.dp-toast {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 400px;
+  min-height: 44px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-m);
+  box-shadow: var(--overlay-shadow);
+  padding: 0 14px;
+  font-size: 13px;
+}
+.dp-toast .dp-count { font: 400 11px var(--font-mono); color: var(--color-ink-3); }

@@ -1,0 +1,30 @@
+/* @dataparbat/ui — lifecycle badges (canvas C): GA/Preview/Internal/
+   Sunset. Boxes live in headers and detail panes, never in table cells. */
+.dp-badge {
+  font: 400 10px var(--font-mono);
+  letter-spacing: 0.03em;
+  padding: 2px 7px;
+  border-radius: var(--radius-s);
+  border: 1px solid var(--color-line);
+  color: var(--color-ink-3);
+}
+.dp-badge.dp-ga {
+  color: var(--color-accent-ink);
+  border-color: var(--color-accent);
+  background: var(--color-accent-wash);
+}
+.dp-badge.dp-prev {
+  color: var(--color-warn);
+  border-color: var(--color-warn);
+  background: var(--color-warn-wash);
+}
+.dp-badge.dp-internal {
+  color: var(--color-staff-ink);
+  border-color: var(--color-staff);
+  background: var(--color-staff-wash);
+}
+.dp-badge.dp-sunset {
+  color: var(--color-crit);
+  border-color: var(--color-crit);
+  background: var(--color-crit-wash);
+}

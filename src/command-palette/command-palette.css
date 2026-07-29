@@ -1,0 +1,59 @@
+/* @dataparbat/ui — command palette (canvas F): grouped items, the active
+   row carries an inset accent bar, shortcuts in mono. */
+.dp-cmdk {
+  width: min(560px, 100%);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-m);
+  box-shadow: var(--overlay-shadow);
+  overflow: hidden;
+}
+.dp-cmdk .dp-cin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--color-line);
+}
+.dp-cmdk .dp-cin svg {
+  width: 15px;
+  height: 15px;
+  stroke: var(--color-ink-3);
+  stroke-width: 1.5;
+  fill: none;
+  stroke-linecap: square;
+}
+.dp-cmdk .dp-cin input {
+  border: 0;
+  outline: 0;
+  background: none;
+  flex: 1;
+  font: 400 14px var(--font-ui);
+  color: var(--color-ink);
+}
+.dp-cmdk .dp-cgrp {
+  font: 400 10.5px var(--font-mono);
+  color: var(--color-ink-3);
+  padding: 10px 14px 4px;
+}
+.dp-cmdk .dp-ci {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 14px;
+  font: 400 13px var(--font-ui);
+  color: var(--color-ink);
+  background: none;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+}
+.dp-cmdk .dp-ci:hover,
+.dp-cmdk .dp-ci[aria-selected="true"] { background: var(--color-quiet-hover); }
+.dp-cmdk .dp-ci[aria-selected="true"] { box-shadow: inset 2px 0 0 var(--color-accent); }
+.dp-cmdk .dp-ci .dp-cik {
+  margin-left: auto;
+  font: 400 10.5px var(--font-mono);
+  color: var(--color-ink-3);
+}

@@ -1,0 +1,29 @@
+/* @dataparbat/ui — radio (canvas F form family). */
+.dp-rad {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+  cursor: pointer;
+}
+.dp-rad > input[type="radio"] {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  border-radius: 50%;
+  border: 1px solid var(--color-line-strong);
+  background: var(--color-surface);
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+.dp-rad > input[type="radio"]:checked { border-color: var(--color-accent); }
+.dp-rad > input[type="radio"]:checked::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+.dp-rad > input[disabled] { opacity: 0.45; cursor: not-allowed; }

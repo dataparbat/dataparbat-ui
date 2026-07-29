@@ -53,15 +53,6 @@
   .skeleton { animation: none; opacity: 0.8; }
 }
 
-/* ————— wire header: the signature idiom (canvas F) ————— */
-.dp-wire { font: 400 11px/1.4 var(--font-mono); letter-spacing: 0.01em; color: var(--color-ink-2); }
-.dp-wire b { font-weight: 400; color: var(--color-accent-ink); }
-.dp-wire::before {
-  content: "";
-  display: inline-block; width: 14px; height: 1px;
-  background: var(--color-line-strong);
-  vertical-align: middle; margin-right: 8px;
-}
 
 /* shared overlay scrim + spin keyframes (used by button, spinner, overlays) */
 .dp-overlay-scrim { position: absolute; inset: 0; background: var(--scrim); }
@@ -76,3 +67,14 @@
   border-radius: var(--radius-s);
   padding: 1px 5px;
 }
+
+/* ————— links (canvas F): body links underline in the accent-ink ————— */
+a.dp-link {
+  color: var(--color-accent-ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+a.dp-link:hover { text-decoration-thickness: 2px; }
+a.dp-quiet-link { color: var(--color-ink); text-decoration: none; }
+a.dp-quiet-link:hover { text-decoration: underline; text-underline-offset: 2px; }
