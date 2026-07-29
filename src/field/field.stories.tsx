@@ -3,7 +3,7 @@ import { Input } from "../input/input";
 import { Select } from "../select/select";
 
 export const TextInput = () => (
-  <div className="p-6 max-w-sm space-y-4">
+  <div className="story-pad story-narrow story-stack">
     <Field label="From address" hint="Any local part at a verified domain.">
       <Input placeholder="hello@acme.com" />
     </Field>

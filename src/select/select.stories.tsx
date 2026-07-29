@@ -1,7 +1,7 @@
 import { Select } from "./select";
 
 export const Basic = () => (
-  <div className="p-6 max-w-sm">
+  <div className="story-pad story-narrow">
     <Select>
       <option>Free</option>
       <option>Scale</option>

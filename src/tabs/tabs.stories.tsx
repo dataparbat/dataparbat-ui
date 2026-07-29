@@ -11,11 +11,11 @@ const TABS = [
 export const Underline = () => {
   const [active, setActive] = useState("general");
   return (
-    <div className="p-6">
+    <div className="story-pad">
       <h1 className="text-[17px] font-semibold mb-5">Settings</h1>
       <Tabs tabs={TABS} active={active} onChange={setActive} label="Settings" idPrefix="story" />
       <TabPanel idPrefix="story" tab={active}>
-        <p className="text-[13px] text-ink-2">{active} panel</p>
+        <p className="story-dim">{active} panel</p>
       </TabPanel>
     </div>
   );

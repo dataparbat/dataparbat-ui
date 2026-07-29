@@ -1,5 +1,3 @@
-@import "tailwindcss";
 @import "../src/default-theme.css";
 @import "../src/ui.css";
-@source "../src";
-body { background: var(--color-bg); color: var(--color-ink); font-family: var(--font-sans); }
+@import "../src/stories/stories.css";

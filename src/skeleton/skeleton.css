@@ -1,0 +1,20 @@
+/* @dataparbat/ui — skeleton styles. Layout-true placeholders (ruling 24).
+   Width variation is a CSS cycle so the sheet reads as content, not
+   stripes — no inline styles, no per-cell props. */
+.dp-skel { display: inline-block; }
+.dp-skel-line { height: 13px; display: block; }
+.dp-skel-table { width: 100%; }
+.dp-skel-table .dp-skel-line { width: 60%; }
+.dp-skel-table td:nth-child(6n + 1) .dp-skel-line { width: 85%; }
+.dp-skel-table td:nth-child(6n + 2) .dp-skel-line { width: 55%; }
+.dp-skel-table td:nth-child(6n + 3) .dp-skel-line { width: 70%; }
+.dp-skel-table td:nth-child(6n + 4) .dp-skel-line { width: 40%; }
+.dp-skel-table td:nth-child(6n + 5) .dp-skel-line { width: 60%; }
+.dp-skel-table tr:nth-child(odd) td:nth-child(6n + 2) .dp-skel-line { width: 75%; }
+.dp-skel-table tr:nth-child(3n) td:nth-child(6n + 1) .dp-skel-line { width: 65%; }
+.dp-skel-card { padding: 16px; display: grid; gap: 10px; }
+.dp-skel-card .dp-skel-line:nth-child(5n + 1) { width: 70%; }
+.dp-skel-card .dp-skel-line:nth-child(5n + 2) { width: 92%; }
+.dp-skel-card .dp-skel-line:nth-child(5n + 3) { width: 48%; }
+.dp-skel-card .dp-skel-line:nth-child(5n + 4) { width: 80%; }
+.dp-skel-card .dp-skel-line:nth-child(5n + 5) { width: 60%; }

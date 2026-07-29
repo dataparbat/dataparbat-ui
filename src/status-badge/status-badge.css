@@ -1,0 +1,15 @@
+/* @dataparbat/ui — status-badge styles. Ported from the locked canvases. */
+/* ————— status glyphs: shape carries state (canvas F) ————— */
+.dp-status { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; text-transform: lowercase; }
+.dp-status.dp-ok { color: var(--color-accent-ink); }
+.dp-status.dp-warn { color: var(--color-warn); }
+.dp-status.dp-crit { color: var(--color-crit); }
+.dp-status.dp-idle { color: var(--color-ink-2); }
+.dp-dot { width: 7px; height: 7px; border-radius: 50%; flex: none; background: var(--color-accent); }
+.dp-status.dp-warn .dp-dot { background: var(--color-warn); border-radius: 1px; }
+.dp-status.dp-crit .dp-dot {
+  background: transparent; width: 0; height: 0; border-radius: 0;
+  border-left: 5px solid transparent; border-right: 5px solid transparent;
+  border-bottom: 8px solid var(--color-crit);
+}
+.dp-status.dp-idle .dp-dot { background: transparent; border: 1.5px solid var(--color-viz-neutral); }

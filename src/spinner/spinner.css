@@ -1,0 +1,7 @@
+/* @dataparbat/ui — spinner styles. Ported from the locked canvases. */
+/* ————— spinner ————— */
+.dp-spinner {
+  display: inline-block; width: 14px; height: 14px; border-radius: 50%;
+  border: 1.5px solid currentColor; border-top-color: transparent;
+  animation: dp-spin 0.7s linear infinite;
+}

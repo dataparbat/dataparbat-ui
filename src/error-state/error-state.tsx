@@ -12,8 +12,8 @@ export function ErrorState({
 }) {
   const detail = error instanceof Error ? error.message : String(error);
   return (
-    <div role="alert" className="py-12 text-center space-y-3">
-      <p className="text-[13px] text-crit">{detail}</p>
+    <div role="alert" className="dp-empty">
+      <p className="dp-err">{detail}</p>
       {onRetry && (
         <Button kind="default" onClick={onRetry}>
           {retryLabel}

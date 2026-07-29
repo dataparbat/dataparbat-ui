@@ -10,10 +10,10 @@ export function Field({
   hint?: string;
 }) {
   return (
-    <label className="block space-y-1.5">
-      <span className="text-[12px] font-medium text-ink-2">{label}</span>
+    <label className="dp-field">
+      <span className="dp-label">{label}</span>
       {children}
-      {hint && <span className="block text-[11.5px] text-ink-3">{hint}</span>}
+      {hint && <span className="dp-hint">{hint}</span>}
     </label>
   );
 }

@@ -19,10 +19,10 @@ export function Modal({
   }, [open, onClose]);
   if (!open) return null;
   return (
-    <div className="fixed inset-0 z-50 grid place-items-center p-4">
-      <div className="absolute inset-0 bg-(--scrim)" onClick={onClose} />
-      <div ref={ref} className="relative w-[440px] max-w-full card bg-surface-2 p-5 space-y-4">
-        <h2 className="text-[15px] font-semibold">{title}</h2>
+    <div className="dp-modal-root">
+      <div className="dp-overlay-scrim" onClick={onClose} />
+      <div ref={ref} role="dialog" aria-modal aria-label={title} className="dp-modal">
+        <h2>{title}</h2>
         {children}
       </div>
     </div>

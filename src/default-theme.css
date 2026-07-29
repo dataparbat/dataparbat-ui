@@ -2,11 +2,12 @@
    The CONTRACT is the Foundation two-layer vocabulary in the Tailwind
    namespace; consumers load their own values for the same names (that's
    the theming API — @dataparbat/theme is the house instantiation).
+   Plain CSS, zero toolchain: custom properties are the contract.
 
    Layers: `h-*` is house chrome (bars, rails — constant across products);
    the unprefixed set is the product layer components live in. Light-first;
    the dark pair rides prefers-color-scheme and [data-theme] overrides. */
-@theme {
+:root {
   --font-display: ui-sans-serif, system-ui, sans-serif;
   --font-ui: ui-sans-serif, system-ui, sans-serif;
   --font-sans: ui-sans-serif, system-ui, sans-serif;

@@ -1,7 +1,5 @@
 import type { ReactNode } from "react";
 
-import { cx } from "../cx";
-
 /* Tabs idiom: title above, underline tab row, accent underline on active, one
    full-width hairline under the row. Proper tablist semantics. */
 
@@ -19,9 +17,9 @@ export function Tabs<T extends string>({
   idPrefix: string;
 }) {
   return (
-    <div role="tablist" aria-label={label} className="relative flex gap-1 mb-5">
+    <div role="tablist" aria-label={label} className="dp-tabs">
       {/* ONE continuous hairline under the whole row — never per-tab bars. */}
-      <span aria-hidden className="absolute inset-x-0 bottom-0 h-px bg-line" />
+      <span aria-hidden className="dp-tabline" />
       {tabs.map((tab) => (
         <button
           key={tab.id}
@@ -37,12 +35,7 @@ export function Tabs<T extends string>({
             if (event.key === "ArrowLeft")
               onChange(tabs[(index - 1 + tabs.length) % tabs.length].id);
           }}
-          className={cx(
-            "relative px-3 py-2 text-[13px] transition-colors",
-            active === tab.id
-              ? "text-ink font-medium after:absolute after:inset-x-0 after:bottom-0 after:h-[2px] after:bg-accent"
-              : "text-ink-2 hover:text-ink",
-          )}
+          className="dp-tab"
         >
           {tab.label()}
         </button>

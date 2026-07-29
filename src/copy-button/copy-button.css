@@ -1,0 +1,9 @@
+/* @dataparbat/ui — copy-button styles. Ported from the locked canvases. */
+/* ————— copy affordance: data is mono, copies on click ————— */
+.dp-copy {
+  font: 400 11px var(--font-mono);
+  color: var(--color-ink-3);
+  background: none; border: 0; cursor: pointer; padding: 0;
+  transition: color var(--dur);
+}
+.dp-copy:hover { color: var(--color-accent-ink); }

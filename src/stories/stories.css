@@ -1,0 +1,11 @@
+/* Dev-only story layout helpers — imported by .ladle/styles.css, never by
+   consumers, never shipped in ui.css. */
+.story-pad { padding: 24px; }
+.story-row { display: flex; align-items: center; gap: 12px; }
+.story-stack { display: grid; gap: 14px; }
+.story-narrow { max-width: 384px; }
+.story-dim { color: var(--color-ink-2); font-size: 13px; }
+.story-end { display: flex; justify-content: flex-end; gap: 8px; }
+.story-wrap { flex-wrap: wrap; }
+.story-w-lg { width: 192px; }
+.story-w-md { width: 224px; }

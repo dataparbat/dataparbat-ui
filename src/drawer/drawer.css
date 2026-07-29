@@ -1,0 +1,24 @@
+/* @dataparbat/ui — drawer styles. Ported from the locked canvases. */
+/* drawer — the overlay discipline shared with modal */
+.dp-drawer-root { position: fixed; inset: 0; z-index: 40; }
+.dp-drawer {
+  position: absolute; right: 0; top: 0; height: 100%;
+  width: 560px; max-width: 92vw;
+  background: var(--color-surface);
+  border-left: 1px solid var(--color-line-strong);
+  box-shadow: var(--overlay-shadow);
+  display: flex; flex-direction: column;
+}
+.dp-drawer > header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 20px; height: 56px; flex-shrink: 0;
+  border-bottom: 1px solid var(--color-line);
+}
+.dp-drawer > .dp-drawer-body { overflow-y: auto; flex: 1; padding: 20px; }
+.dp-close {
+  background: none; border: 0; cursor: pointer;
+  color: var(--color-ink-3); font-size: 18px; line-height: 1; padding: 2px 5px;
+  border-radius: var(--radius-control);
+}
+.dp-close:hover { color: var(--color-ink); background: var(--color-quiet-hover); }
+.dp-drawer-title { min-width: 0; }

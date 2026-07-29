@@ -1,0 +1,16 @@
+/* @dataparbat/ui — tabs styles. Ported from the locked canvases. */
+/* ————— tabs (canvas F; one continuous hairline, accent underline) ————— */
+.dp-tabs { position: relative; display: flex; gap: 22px; margin-bottom: 20px; }
+.dp-tabs .dp-tabline { position: absolute; inset-inline: 0; bottom: 0; height: 1px; background: var(--color-line); }
+.dp-tab {
+  font: 500 13px var(--font-ui);
+  color: var(--color-ink-3);
+  padding: 8px 1px 7px;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  position: relative;
+}
+.dp-tab:hover { color: var(--color-ink-2); }
+.dp-tab[aria-selected="true"] { color: var(--color-ink); font-weight: 550; border-bottom-color: var(--color-accent); }

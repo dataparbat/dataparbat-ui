@@ -6,7 +6,7 @@ const STATUSES = [
 ];
 
 export const AllStatuses = () => (
-  <div className="flex flex-wrap gap-2 p-6">
+  <div className="story-pad story-row story-wrap">
     {STATUSES.map((status) => (
       <StatusBadge key={status} value={status} />
     ))}

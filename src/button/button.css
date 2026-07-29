@@ -1,0 +1,35 @@
+/* @dataparbat/ui — button styles. Ported from the locked canvases. */
+/* ————— buttons: the instrument chassis (canvas F, six states) ————— */
+.dp-btn {
+  font: 550 13px/1 var(--font-ui);
+  letter-spacing: 0.02em;
+  padding: 9px 16px;
+  border-radius: var(--radius-control);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--color-line-strong);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  transition: background-color var(--dur), border-color var(--dur);
+  user-select: none;
+}
+.dp-btn:hover { background: var(--color-quiet-hover); }
+.dp-btn:active { background: var(--color-quiet-down); transform: translateY(0.5px); }
+.dp-btn.dp-primary { background: var(--color-accent); color: var(--color-on-accent); border-color: transparent; }
+.dp-btn.dp-primary:hover { background: var(--color-accent-hover); }
+.dp-btn.dp-primary:active { background: var(--color-accent-down); }
+.dp-btn.dp-danger { color: var(--color-crit); }
+.dp-btn.dp-danger:hover { background: var(--color-crit-wash); border-color: var(--color-crit); }
+.dp-btn.dp-danger:focus-visible { outline-color: var(--color-crit); }
+.dp-btn.dp-ghost { border-color: transparent; background: transparent; color: var(--color-ink-2); }
+.dp-btn.dp-ghost:hover { background: var(--color-quiet-hover); color: var(--color-ink); }
+.dp-btn[disabled] { opacity: 0.45; cursor: not-allowed; transform: none; }
+.dp-btn[disabled]:hover { background: var(--color-surface); }
+.dp-btn.dp-primary[disabled]:hover { background: var(--color-accent); }
+.dp-btn .dp-spin {
+  width: 11px; height: 11px; border-radius: 50%; flex: none;
+  border: 1.5px solid currentColor; border-top-color: transparent;
+  animation: dp-spin 0.7s linear infinite;
+}

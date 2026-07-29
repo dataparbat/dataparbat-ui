@@ -1,7 +1,7 @@
 import { Button } from "./button";
 
 export const Kinds = () => (
-  <div className="flex gap-3 p-6">
+  <div className="story-pad story-row">
     <Button kind="primary">Send email</Button>
     <Button>Default</Button>
     <Button kind="danger">Delete</Button>

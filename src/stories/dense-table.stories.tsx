@@ -7,7 +7,7 @@ const ROWS = [
 ];
 
 export const DenseTable = () => (
-  <div className="p-6 card overflow-hidden">
+  <div className="story-pad">
     <table className="w-full table-dense">
       <thead>
         <tr><th>Recipient</th><th>Subject</th><th>Status</th><th>Age</th></tr>
@@ -18,7 +18,7 @@ export const DenseTable = () => (
             <td className="data">{to}</td>
             <td>{subject}</td>
             <td><StatusBadge value={status} /></td>
-            <td className="text-ink-3">{age}</td>
+            <td className="story-dim">{age}</td>
           </tr>
         ))}
       </tbody>
