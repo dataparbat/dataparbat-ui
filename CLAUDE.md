@@ -53,5 +53,7 @@ must be traceable to a canvas or the rulings ledger
 
 ## Boundaries
 
-Shell furniture (house bar, switchers, staff bar, rail, catalog rows) is
-console-app composition — NOT kit. Promote only on a second consumer.
+The kit is shadcn-class PRIMITIVES only (his ruling 2026-07-29). Brand
+values live in @dataparbat/theme; shared shell furniture (house bar,
+switchers, staff bar) lives in @dataparbat/chrome — each its own package,
+never folded here. Rail and catalog rows remain app composition.

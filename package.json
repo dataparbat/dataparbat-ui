@@ -10,12 +10,7 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./chrome": {
-      "types": "./dist/chrome/index.d.ts",
-      "import": "./dist/chrome/index.js"
-    },
     "./ui.css": "./src/ui.css",
-    "./chrome.css": "./src/chrome/chrome.css",
     "./default-theme.css": "./src/default-theme.css"
   },
   "peerDependencies": {
