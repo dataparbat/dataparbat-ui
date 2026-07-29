@@ -12,3 +12,4 @@ export { Spinner } from "./spinner/spinner";
 export { Skeleton, TableSkeleton, CardSkeleton } from "./skeleton/skeleton";
 export { ErrorState } from "./error-state/error-state";
 export { Tabs, TabPanel } from "./tabs/tabs";
+export { useEscape } from "./hooks/use-escape";

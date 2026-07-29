@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import { useEscape } from "../use-escape";
+import { useEscape } from "../hooks/use-escape";
 
 export function Modal({
   open,
