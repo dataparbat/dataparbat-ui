@@ -34,9 +34,10 @@ Tasks:
       dark via media query AND `[data-theme]`. (2026-07-29)
 - [x] Real values live in `@dataparbat/theme`, now in the kit's contract
       namespace. Kit never imports it. (2026-07-29)
-- [ ] Fonts: theme owns the @font-face for Schibsted Grotesk / Instrument
-      Sans / Commit Mono (all OFL, self-hosted). Kit keeps system stacks in
-      its neutral default.
+- [x] Fonts: @dataparbat/theme self-hosts all three faces (variable
+      Schibsted Grotesk + Instrument Sans, Commit Mono 400/500), OFL
+      notices included. Kit keeps system stacks in its neutral default.
+      (2026-07-29 — the audit is fully closed.)
 
 ## 2. Existing components — align to canvas treatments
 
