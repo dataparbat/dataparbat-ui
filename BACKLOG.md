@@ -82,3 +82,14 @@ consumer exists.
 - legacy-app + www: PINNED to the pre-migration kit (git SHA / lockfile) —
   they stay on the old language until the website redesign; do not chase.
 - First consumer of the migrated kit: the console build. Blocked on §1–§3.
+
+## Phone idioms (ruling 58 — each primitive carries its own, once)
+
+- DataTable → the stacked two-row card list (J1 phone tier's pcard: row 1
+  name + status glyph, row 2 dim mono meta + chevron; 44px minimum rows).
+- Drawer/Sheet → full-screen under 480px.
+- OverflowMenu / switcher popovers → bottom-anchored panel on touch.
+- TableToolbar → search collapses to icon-expand; tokens wrap.
+- Terminal → horizontal scroll stays, font a step down.
+Consumers (console rail → drawer, chassis topbar) are app-side compositions
+and follow once the primitives land.
