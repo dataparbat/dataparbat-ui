@@ -15,7 +15,7 @@ export const Underline = () => {
       <h1 className="text-[17px] font-semibold mb-5">Settings</h1>
       <Tabs tabs={TABS} active={active} onChange={setActive} label="Settings" idPrefix="story" />
       <TabPanel idPrefix="story" tab={active}>
-        <p className="text-[13px] text-ink-dim">{active} panel</p>
+        <p className="text-[13px] text-ink-2">{active} panel</p>
       </TabPanel>
     </div>
   );

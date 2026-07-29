@@ -11,9 +11,9 @@ export function Field({
 }) {
   return (
     <label className="block space-y-1.5">
-      <span className="text-[12px] font-medium text-ink-dim">{label}</span>
+      <span className="text-[12px] font-medium text-ink-2">{label}</span>
       {children}
-      {hint && <span className="block text-[11.5px] text-ink-mute">{hint}</span>}
+      {hint && <span className="block text-[11.5px] text-ink-3">{hint}</span>}
     </label>
   );
 }

@@ -12,7 +12,7 @@ export function CopyButton({
   const [copied, setCopied] = useState(false);
   return (
     <button
-      className="text-[11px] text-ink-mute hover:text-brand transition-colors data"
+      className="text-[11px] text-ink-3 hover:text-accent transition-colors data"
       onClick={() => {
         void navigator.clipboard.writeText(text);
         setCopied(true);

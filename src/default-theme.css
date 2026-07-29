@@ -1,33 +1,138 @@
 /* Neutral default theme — the kit renders complete without any brand.
-   Consumers override by loading their own values for the same token names
-   (that's the theming API). Sendzila itself uses @sendzila/theme instead. */
+   The CONTRACT is the Foundation two-layer vocabulary in the Tailwind
+   namespace; consumers load their own values for the same names (that's
+   the theming API — @dataparbat/theme is the house instantiation).
+
+   Layers: `h-*` is house chrome (bars, rails — constant across products);
+   the unprefixed set is the product layer components live in. Light-first;
+   the dark pair rides prefers-color-scheme and [data-theme] overrides. */
 @theme {
+  --font-display: ui-sans-serif, system-ui, sans-serif;
+  --font-ui: ui-sans-serif, system-ui, sans-serif;
   --font-sans: ui-sans-serif, system-ui, sans-serif;
-  --font-mono: ui-monospace, "SF Mono", monospace;
-  --color-bg: #0b0c0e;
-  --color-raised: #121316;
-  --color-overlay: #17181c;
-  --color-inset: #070809;
-  --color-edge: #24262b;
-  --color-edge-strong: #303239;
-  --color-ink: #ececee;
-  --color-ink-dim: #9a9ba3;
-  --color-ink-mute: #62636b;
-  --color-brand: #6c8cff;
-  --color-brand-hover: #86a0ff;
-  --color-brand-ink: #0a1030;
-  --color-ok: #4ade80;
-  --color-ok-dim: #12241a;
-  --color-info: #7dd3fc;
-  --color-info-dim: #10222b;
-  --color-warn: #fbbf24;
-  --color-warn-dim: #292112;
-  --color-bad: #f87171;
-  --color-bad-dim: #2b1517;
-  --color-grape: #d8b4fe;
-  --color-grape-dim: #221434;
-  --color-neutral: #a1a1aa;
-  --color-neutral-dim: #1c1c1f;
-  --radius-card: 10px;
-  --radius-control: 7px;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* layer 1 — house chrome */
+  --color-h-bg: #f6f7f9;
+  --color-h-surface: #ffffff;
+  --color-h-ink: #17191f;
+  --color-h-ink-2: #5b6070;
+  --color-h-ink-3: #8b909e;
+  --color-h-line: #e4e6ec;
+  --color-h-hover: #eef0f4;
+  --color-h-down: #e6e9ef;
+  --color-staff: #4a3d7a;
+  --color-staff-wash: #efecf7;
+  --color-staff-ink: #3d3266;
+
+  /* layer 2 — product ground (neutral: no tint, no brand) */
+  --color-bg: #fafafa;
+  --color-surface: #ffffff;
+  --color-surface-2: #f4f5f6;
+  --color-ink: #1b1e22;
+  --color-ink-2: #5d636b;
+  --color-ink-3: #71767e;
+  --color-line: #e5e7e9;
+  --color-line-strong: #c9cdd2;
+
+  /* accent family (neutral blue placeholder — a theme replaces the family) */
+  --color-accent: #2f4fd0;
+  --color-accent-hover: #2a46b8;
+  --color-accent-down: #243da1;
+  --color-accent-ink: #2743ad;
+  --color-accent-wash: #eceffb;
+  --color-on-accent: #f4f6fe;
+  --color-quiet-hover: #f0f1f3;
+  --color-quiet-down: #e8eaec;
+
+  /* semantic — attention only */
+  --color-warn: #946300;
+  --color-warn-wash: #f6efdd;
+  --color-crit: #a3312c;
+  --color-crit-wash: #f8ebea;
+
+  /* dataviz ramp */
+  --color-viz-1: #2f4fd0;
+  --color-viz-2: #5568cd;
+  --color-viz-3: #7f8ed8;
+  --color-viz-4: #aab4e5;
+  --color-viz-5: #d7dcf2;
+  --color-viz-neutral: #9ba0a8;
+  --color-viz-ghost: #d7dcf2;
+
+  /* geometry */
+  --radius-s: 3px;
+  --radius-m: 6px;
+  --radius-control: 2px;
+}
+
+/* runtime tokens Tailwind doesn't namespace */
+:root {
+  --scrim: rgba(14, 16, 20, 0.44);
+  --overlay-shadow: 0 12px 32px rgba(12, 14, 18, 0.14);
+  --dur: 120ms;
+}
+
+/* the dark pair — same names, swapped values */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-h-bg: #0f1114; --color-h-surface: #14161a;
+    --color-h-ink: #e8e9ec; --color-h-ink-2: #8f95a1; --color-h-ink-3: #6b7180;
+    --color-h-line: #24272c; --color-h-hover: #1a1d22; --color-h-down: #20242a;
+    --color-staff: #a99ce0; --color-staff-wash: #1e1b2e; --color-staff-ink: #bdb2ea;
+    --color-bg: #0e0f11; --color-surface: #151618; --color-surface-2: #1b1d1f;
+    --color-ink: #f0f1f1; --color-ink-2: #9ca0a4; --color-ink-3: #8a8f93;
+    --color-line: #26282a; --color-line-strong: #3d4044;
+    --color-accent: #7d95f5; --color-accent-hover: #93a7f7; --color-accent-down: #6b84ec;
+    --color-accent-ink: #a3b3f8; --color-accent-wash: #181d31;
+    --color-on-accent: #0b0f22;
+    --color-quiet-hover: #1d1f21; --color-quiet-down: #232527;
+    --color-warn: #d9a943; --color-warn-wash: #2a2214;
+    --color-crit: #e0716a; --color-crit-wash: #2b1917;
+    --color-viz-1: #7d95f5; --color-viz-2: #6b84ec; --color-viz-3: #93a7f7;
+    --color-viz-4: #b3c1f9; --color-viz-5: #272d45;
+    --color-viz-neutral: #64686d; --color-viz-ghost: #272d45;
+    --scrim: rgba(0, 0, 0, 0.56);
+    --overlay-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  }
+}
+:root[data-theme="dark"] {
+  --color-h-bg: #0f1114; --color-h-surface: #14161a;
+  --color-h-ink: #e8e9ec; --color-h-ink-2: #8f95a1; --color-h-ink-3: #6b7180;
+  --color-h-line: #24272c; --color-h-hover: #1a1d22; --color-h-down: #20242a;
+  --color-staff: #a99ce0; --color-staff-wash: #1e1b2e; --color-staff-ink: #bdb2ea;
+  --color-bg: #0e0f11; --color-surface: #151618; --color-surface-2: #1b1d1f;
+  --color-ink: #f0f1f1; --color-ink-2: #9ca0a4; --color-ink-3: #8a8f93;
+  --color-line: #26282a; --color-line-strong: #3d4044;
+  --color-accent: #7d95f5; --color-accent-hover: #93a7f7; --color-accent-down: #6b84ec;
+  --color-accent-ink: #a3b3f8; --color-accent-wash: #181d31;
+  --color-on-accent: #0b0f22;
+  --color-quiet-hover: #1d1f21; --color-quiet-down: #232527;
+  --color-warn: #d9a943; --color-warn-wash: #2a2214;
+  --color-crit: #e0716a; --color-crit-wash: #2b1917;
+  --color-viz-1: #7d95f5; --color-viz-2: #6b84ec; --color-viz-3: #93a7f7;
+  --color-viz-4: #b3c1f9; --color-viz-5: #272d45;
+  --color-viz-neutral: #64686d; --color-viz-ghost: #272d45;
+  --scrim: rgba(0, 0, 0, 0.56);
+  --overlay-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+:root[data-theme="light"] {
+  --color-h-bg: #f6f7f9; --color-h-surface: #ffffff;
+  --color-h-ink: #17191f; --color-h-ink-2: #5b6070; --color-h-ink-3: #8b909e;
+  --color-h-line: #e4e6ec; --color-h-hover: #eef0f4; --color-h-down: #e6e9ef;
+  --color-staff: #4a3d7a; --color-staff-wash: #efecf7; --color-staff-ink: #3d3266;
+  --color-bg: #fafafa; --color-surface: #ffffff; --color-surface-2: #f4f5f6;
+  --color-ink: #1b1e22; --color-ink-2: #5d636b; --color-ink-3: #71767e;
+  --color-line: #e5e7e9; --color-line-strong: #c9cdd2;
+  --color-accent: #2f4fd0; --color-accent-hover: #2a46b8; --color-accent-down: #243da1;
+  --color-accent-ink: #2743ad; --color-accent-wash: #eceffb;
+  --color-on-accent: #f4f6fe;
+  --color-quiet-hover: #f0f1f3; --color-quiet-down: #e8eaec;
+  --color-warn: #946300; --color-warn-wash: #f6efdd;
+  --color-crit: #a3312c; --color-crit-wash: #f8ebea;
+  --color-viz-1: #2f4fd0; --color-viz-2: #5568cd; --color-viz-3: #7f8ed8;
+  --color-viz-4: #aab4e5; --color-viz-5: #d7dcf2;
+  --color-viz-neutral: #9ba0a8; --color-viz-ghost: #d7dcf2;
+  --scrim: rgba(14, 16, 20, 0.44);
+  --overlay-shadow: 0 12px 32px rgba(12, 14, 18, 0.14);
 }

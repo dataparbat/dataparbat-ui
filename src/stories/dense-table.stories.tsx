@@ -18,7 +18,7 @@ export const DenseTable = () => (
             <td className="data">{to}</td>
             <td>{subject}</td>
             <td><StatusBadge value={status} /></td>
-            <td className="text-ink-mute">{age}</td>
+            <td className="text-ink-3">{age}</td>
           </tr>
         ))}
       </tbody>

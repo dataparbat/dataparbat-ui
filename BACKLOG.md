@@ -22,32 +22,22 @@ v15 is TWO-LAYER and light-first:
   `--dur:120ms`; breakpoints `--bp-rail:1240px --bp-min:920px`
 
 Tasks:
-- [ ] Rewrite every component against the new names; delete the old contract.
-- [ ] `default-theme.css` re-derived: still NEUTRAL (kit renders complete
-      without any brand — that rule survives) but in the new vocabulary,
-      light-first, with the dark pair via media query AND `[data-theme]`.
-- [ ] Real values live in `@dataparbat/theme` (dataparbat repo,
-      packages/theme): house.css + per-product accent pack. Kit never
-      imports it; docs point at it.
+- [x] Rewrite every component against the new names; delete the old contract. (2026-07-29)
+- [x] `default-theme.css` re-derived: neutral, new vocabulary, light-first,
+      dark via media query AND `[data-theme]`. (2026-07-29)
+- [x] Real values live in `@dataparbat/theme`, now in the kit's contract
+      namespace. Kit never imports it. (2026-07-29)
 - [ ] Fonts: theme owns the @font-face for Schibsted Grotesk / Instrument
       Sans / Commit Mono (all OFL, self-hosted). Kit keeps system stacks in
       its neutral default.
 
 ## 2. Existing components — align to canvas treatments
 
-- [ ] **Button** — the instrument chassis: 2px radius, 550/13 tracked label,
-      9×16 padding, six states (rest/hover/active w/ translateY(0.5px)/
-      focus-visible 1.5px accent ring offset 2/disabled .45/loading w/ 11px
-      spinner). Danger variant: crit ink, crit-wash hover. Primary disabled
-      keeps accent (no hover shift).
-- [ ] **StatusBadge** — shape carries state beside color (colorblind rule):
-      circle=healthy, 1px-radius square=attention, triangle=failed,
-      ring=waiting. Add the four glyph shapes; color alone is a violation.
+- [x] **Button** — instrument chassis, six states incl. loading spinner. (2026-07-29)
+- [x] **StatusBadge** — four glyph shapes carry state beside color. (2026-07-29)
 - [ ] **Tabs** — 2px accent underline on selected, 550 weight, ink-3 rest,
       -1px margin trick; focus ring 2px radius.
-- [ ] **Skeleton** — layout-true (ruling 24): pulse is opacity-only
-      1.6s (1 → .55), 2px radius, surface-2 fill; DIES under
-      prefers-reduced-motion (static .8 opacity, no animation).
+- [x] **Skeleton** — opacity-only pulse, reduced-motion kill. (2026-07-29)
 - [ ] **EmptyState** — the teaching empty: table keeps its own header row,
       body is the telegram (20px display heading, ≤42ch balanced copy, ONE
       primary action + one quiet underlined link, single-line mono fine

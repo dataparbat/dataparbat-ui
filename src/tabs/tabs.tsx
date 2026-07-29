@@ -21,7 +21,7 @@ export function Tabs<T extends string>({
   return (
     <div role="tablist" aria-label={label} className="relative flex gap-1 mb-5">
       {/* ONE continuous hairline under the whole row — never per-tab bars. */}
-      <span aria-hidden className="absolute inset-x-0 bottom-0 h-px bg-edge" />
+      <span aria-hidden className="absolute inset-x-0 bottom-0 h-px bg-line" />
       {tabs.map((tab) => (
         <button
           key={tab.id}
@@ -40,8 +40,8 @@ export function Tabs<T extends string>({
           className={cx(
             "relative px-3 py-2 text-[13px] transition-colors",
             active === tab.id
-              ? "text-ink font-medium after:absolute after:inset-x-0 after:bottom-0 after:h-[2px] after:bg-brand"
-              : "text-ink-dim hover:text-ink",
+              ? "text-ink font-medium after:absolute after:inset-x-0 after:bottom-0 after:h-[2px] after:bg-accent"
+              : "text-ink-2 hover:text-ink",
           )}
         >
           {tab.label()}

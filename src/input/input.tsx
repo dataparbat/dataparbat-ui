@@ -5,7 +5,7 @@ export function Input(props: React.InputHTMLAttributes<HTMLInputElement>) {
     <input
       {...props}
       className={cx(
-        "h-8 w-full rounded-[7px] bg-inset border border-edge px-2.5 text-[13px] text-ink placeholder:text-ink-mute focus:border-edge-strong",
+        "h-8 w-full rounded-[2px] bg-surface border border-line-strong px-2.5 font-mono text-[13px] text-ink placeholder:text-ink-3 disabled:opacity-45",
         props.className,
       )}
     />
