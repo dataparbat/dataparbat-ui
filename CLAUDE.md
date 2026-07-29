@@ -29,6 +29,14 @@ must be traceable to a canvas or the rulings ledger
   package, no effect components in the kit.
 - Strings as props (translatable); WCAG 2.2 AA; every data surface renders
   exactly one of skeleton → error → empty → data (four-state rule).
+- Responsiveness (ruling 58): desktop-primary, mobile-deliberate. Console
+  CSS is desktop-first — the base IS the 1240 canvas rendition; phone
+  arrives as the canvas's DRAWN phone tier via `max-width` overrides,
+  never an undesigned fluid reflow. Each primitive carries its own phone
+  idiom ONCE (table → stacked cards, sheet → full screen, overlay menus →
+  bottom-anchored) so every product interior inherits the mobile story.
+  A phone rendition is part of done for new screens. Marketing sites and
+  docs are the inverse: mobile-first, mechanics and design both.
 - Shape carries state beside color (circle/square/triangle/ring).
 - Skeletons are layout-true, opacity-pulse only, die under reduced motion.
 
