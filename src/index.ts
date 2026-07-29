@@ -10,6 +10,7 @@ export { Modal } from "./modal/modal";
 export { EmptyState } from "./empty-state/empty-state";
 export { Spinner } from "./spinner/spinner";
 export { Skeleton, TableSkeleton, CardSkeleton } from "./skeleton/skeleton";
+export { useLoadingPhase } from "./skeleton/use-loading-phase";
 export { ErrorState } from "./error-state/error-state";
 export { Tabs, TabPanel } from "./tabs/tabs";
 export { useEscape } from "./hooks/use-escape";
