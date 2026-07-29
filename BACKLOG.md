@@ -63,20 +63,8 @@ Tasks:
 
 ## 3. Missing components the canvases require (console blockers)
 
-- [ ] **DataTable** — THE brand surface, biggest gap. Fixed 34px rows,
-      cells never wrap, one line per row; secondary facts as dim mono
-      suffix behind a middot — NEVER boxed badges inside cells (headers and
-      detail panes only). Column roles with declared bounds (c-name 180–340,
-      c-sub 150–280, c-id 132 mono, c-status 132, c-kind 104, c-time 76
-      right mono tabular, c-num 88 right, c-act 1%). Row states: hover
-      quiet-hover, focus ring drawn INSIDE (-2 offset), selection
-      accent-wash + first-cell 550 (warn/crit rows keep their wash). Sort
-      headers: lowercase mono, direction arrow in accent-ink, always shown
-      (ruling 43). `.nil` voice for absent values. Footer: honest count,
-      cursor paging ("load more"), never fake page numbers.
-- [ ] **TableToolbar** — conventional on purpose: 28px search box scoped
-      placeholder, `Filter` button, applied filters as removable key:value
-      tokens (`mode: test ×`), overflow icon-button menu. 44px min height.
+- [x] **DataTable** — built 2026-07-29 (`src/data-table/`): column roles, 34px rows, suffix idiom, sort/selection/focus rules, warn/crit rows, honest footer, Nil voice.
+- [x] **TableToolbar** — built 2026-07-29: search box, filter tokens, icon button, overflow menu (click-outside + escape via shared hooks).
 - [ ] **WireHeader** — the signature idiom: lowercase mono key:value
       eyebrow with the 14px dash. One per surface, exactly.
 - [ ] **Chip (wchip)** — key:value mode chips: mono 10.5, split key/value
@@ -93,7 +81,7 @@ Tasks:
       offset; also the `gated` pattern (ruling 6): a role-gated control is
       VISIBLE, disabled, reason attached on hover/focus-within.
 - [ ] **Banner** — inline page-level notice, warn variant.
-- [ ] **Kbd** — mono 11, bottom-heavy border.
+- [x] **Kbd** — `.dp-kbd` in base. (2026-07-29)
 - [ ] **Meter** — 5px bar, viz-ghost track, accent fill, warn variant
       (ruling 29).
 - [ ] **CommandPalette** — 560px, grouped items, inset 2px accent bar on

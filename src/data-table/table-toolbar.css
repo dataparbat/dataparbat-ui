@@ -1,0 +1,135 @@
+/* @dataparbat/ui — table toolbar (canvas F): conventional on purpose.
+   A search box that names its scope, a Filter button, applied filters as
+   removable key:value tokens anyone can read, an overflow menu for
+   view-level actions. */
+.dp-qbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 8px 12px;
+  min-height: 44px;
+  border-bottom: 1px solid var(--color-line);
+}
+.dp-qbar .dp-spacer { margin-left: auto; }
+
+/* search box */
+.dp-sbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 28px;
+  width: 250px;
+  padding: 0 9px;
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-s);
+  background: var(--color-surface);
+}
+.dp-sbox svg {
+  width: 13px;
+  height: 13px;
+  stroke: var(--color-ink-3);
+  stroke-width: 1.5;
+  fill: none;
+  stroke-linecap: square;
+  flex: none;
+}
+.dp-sbox input {
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 100%;
+  font: 400 12.5px var(--font-ui);
+  color: var(--color-ink);
+}
+.dp-sbox input::placeholder { color: var(--color-ink-3); }
+.dp-sbox:focus-within { border-color: var(--color-accent); }
+
+/* applied filter tokens */
+.dp-qtok {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  flex: none;
+  font: 400 12px var(--font-mono);
+  background: var(--color-surface-2);
+  border-radius: var(--radius-s);
+  padding: 0 3px 0 8px;
+}
+.dp-qtok .dp-qk { color: var(--color-ink-3); margin-right: 3px; }
+.dp-qtok .dp-qv { color: var(--color-ink); }
+.dp-qtok.dp-warn .dp-qv { color: var(--color-warn); }
+.dp-qtok .dp-qx {
+  display: inline-grid;
+  place-content: center;
+  width: 18px;
+  height: 18px;
+  margin-left: 4px;
+  border: 0;
+  background: none;
+  border-radius: 2px;
+  color: var(--color-ink-3);
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1;
+}
+.dp-qtok .dp-qx:hover { color: var(--color-crit); background: var(--color-quiet-hover); }
+
+/* small button + icon button */
+.dp-btn.dp-sm { padding: 0 10px; font-size: 12px; height: 28px; }
+.dp-iconbtn {
+  width: 28px;
+  height: 28px;
+  display: inline-grid;
+  place-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--color-ink-2);
+  cursor: pointer;
+  transition: background-color var(--dur);
+}
+.dp-iconbtn:hover { background: var(--color-quiet-hover); color: var(--color-ink); }
+.dp-iconbtn:active { background: var(--color-quiet-down); }
+.dp-iconbtn svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  fill: none;
+  stroke-linecap: square;
+}
+
+/* overflow menu */
+.dp-rowmenu { position: relative; display: inline-block; }
+.dp-menu {
+  position: absolute;
+  right: 0;
+  top: 32px;
+  width: 190px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-m);
+  box-shadow: var(--overlay-shadow);
+  padding: 6px;
+  font: 400 13px var(--font-ui);
+  z-index: 2;
+}
+.dp-menu .dp-mi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 7px 9px;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--color-ink);
+  text-align: left;
+  border-radius: var(--radius-s);
+  cursor: pointer;
+}
+.dp-menu .dp-mi:hover { background: var(--color-quiet-hover); }
+.dp-menu .dp-mi.dp-crit { color: var(--color-crit); }
+.dp-menu .dp-mi .dp-mk { font: 400 10.5px var(--font-mono); color: var(--color-ink-3); }
+.dp-menu hr { border: 0; border-top: 1px solid var(--color-line); margin: 5px 3px; }

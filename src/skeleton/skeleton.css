@@ -4,6 +4,7 @@
 .dp-skel { display: inline-block; }
 .dp-skel-line { height: 13px; display: block; }
 .dp-skel-table { width: 100%; }
+.dp-skel-table td { border-bottom: 1px solid var(--color-line); }
 .dp-skel-table .dp-skel-line { width: 60%; }
 .dp-skel-table td:nth-child(6n + 1) .dp-skel-line { width: 85%; }
 .dp-skel-table td:nth-child(6n + 2) .dp-skel-line { width: 55%; }

@@ -21,7 +21,7 @@ export function TableSkeleton({
 }) {
   return (
     <div role="status" aria-label={loadingLabel}>
-      <table className="table-dense dp-skel-table" aria-hidden>
+      <table className="dp-table dp-skel-table" aria-hidden>
         <tbody>
           {Array.from({ length: rows }, (_, row) => (
             <tr key={row}>
