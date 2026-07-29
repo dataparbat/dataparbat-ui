@@ -1,4 +1,6 @@
-import { useEffect, type ReactNode } from "react";
+import type { ReactNode } from "react";
+
+import { useEscape } from "../use-escape";
 
 export function Drawer({
   open,
@@ -11,12 +13,10 @@ export function Drawer({
   children: ReactNode;
   title: ReactNode;
 }) {
-  useEffect(() => {
-    const onKey = (event: KeyboardEvent) => event.key === "Escape" && onClose();
-    if (open) window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [open, onClose]);
+  useEscape(open, onClose);
+
   if (!open) return null;
+
   return (
     <div className="dp-drawer-root">
       <div className="dp-overlay-scrim" onClick={onClose} />

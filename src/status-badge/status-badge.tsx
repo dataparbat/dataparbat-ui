@@ -22,6 +22,7 @@ const TONES: Record<string, Tone> = {
 
 export function StatusBadge({ value, tone }: { value: string; tone?: Tone }) {
   const resolved = tone ?? TONES[value] ?? "idle";
+
   return (
     <span className={cx("dp-status", `dp-${resolved}`)}>
       <span aria-hidden className="dp-dot" />

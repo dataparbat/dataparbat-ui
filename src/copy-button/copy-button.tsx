@@ -10,6 +10,7 @@ export function CopyButton({
   copiedLabel?: string;
 }) {
   const [copied, setCopied] = useState(false);
+
   return (
     <button
       className="dp-copy"
