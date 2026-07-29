@@ -29,6 +29,16 @@ must be traceable to a canvas or the rulings ledger
   package, no effect components in the kit.
 - Strings as props (translatable); WCAG 2.2 AA; every data surface renders
   exactly one of skeleton → error → empty → data (four-state rule).
+- State lives in exactly one of five homes, chosen by KIND, never by
+  convenience: server state → TanStack Query (the only cache; never copied
+  into a store); ambient identity (workspace, lens, product) → React
+  Context as dependency injection — low-write, subtree-scoped, where a
+  change SHOULD re-render the subtree because every query re-keys;
+  ephemeral UI (open sheets, drafts, search text) → local useState; device
+  prefs → localStorage; navigation state → the URL. No Redux and no
+  global store: a subscription store (Zustand-class) may be introduced
+  ONLY feature-scoped, when a surface needs high-frequency writes with
+  selective subscription (a live event feed), and never for server cache.
 - Responsiveness (ruling 58): desktop-primary, mobile-deliberate. Console
   CSS is desktop-first — the base IS the 1240 canvas rendition; phone
   arrives as the canvas's DRAWN phone tier via `max-width` overrides,
