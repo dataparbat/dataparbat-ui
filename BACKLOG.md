@@ -1,5 +1,12 @@
 # dataparbat-ui — kit-vs-canvas audit (2026-07-29)
 
+**Styling ruling (2026-07-29, his):** the kit owns its styling — plain CSS,
+no Tailwind, no SCSS, no inline style attributes. Per-component colocated
+.css files behind one aggregating ui.css entry; dp-prefixed canvas class
+names so every treatment traces to the locked canvases; tokens (custom
+properties) remain the only theming API. Dependencies only where we cannot
+own the thing (the SES rule) — styling is ownable.
+
 Audited against the locked Foundation (F, v15) and Console (C, rev 8)
 canvases + the rulings they bake in. The kit's ARCHITECTURE survives (token
 contract, neutral defaults, strings-as-props, a11y); its VOCABULARY and
