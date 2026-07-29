@@ -2,6 +2,7 @@
 /* modal (canvas F: one scrim, one shadow, one hairline) */
 .dp-modal-root { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 16px; }
 .dp-modal {
+  overscroll-behavior: contain;
   position: relative;
   width: 440px; max-width: 100%;
   background: var(--color-surface);

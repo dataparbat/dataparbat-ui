@@ -2,6 +2,7 @@
 /* drawer — the overlay discipline shared with modal */
 .dp-drawer-root { position: fixed; inset: 0; z-index: 40; }
 .dp-drawer {
+  overscroll-behavior: contain;
   position: absolute; right: 0; top: 0; height: 100%;
   width: 560px; max-width: 92vw;
   background: var(--color-surface);

@@ -13,6 +13,8 @@
 .dp-in::placeholder { color: var(--color-ink-3); }
 .dp-in[disabled] { opacity: 0.45; }
 select.dp-in {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
   font-family: var(--font-ui);
   appearance: none;
   width: auto;
