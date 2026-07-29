@@ -42,24 +42,14 @@ Tasks:
 
 - [x] **Button** — instrument chassis, six states incl. loading spinner. (2026-07-29)
 - [x] **StatusBadge** — four glyph shapes carry state beside color. (2026-07-29)
-- [ ] **Tabs** — 2px accent underline on selected, 550 weight, ink-3 rest,
-      -1px margin trick; focus ring 2px radius.
+- [x] **Tabs** — accent underline, one continuous hairline. (2026-07-29)
 - [x] **Skeleton** — opacity-only pulse, reduced-motion kill. (2026-07-29)
-- [ ] **EmptyState** — the teaching empty: table keeps its own header row,
-      body is the telegram (20px display heading, ≤42ch balanced copy, ONE
-      primary action + one quiet underlined link, single-line mono fine
-      print). Terminal fragment (`.term`) as an optional slot.
-- [ ] **ErrorState** — inline error: 12.5px crit with the triangle glyph
-      ::before; banner variant: warn border + wash. Field error: crit input
-      border + accent focus ring still.
-- [ ] **Input/Select/Field** — mono 13 input text, 2px radius,
-      line-strong border, accent focus ring 1.5px offset 2, disabled .45;
-      select with the double-triangle chevron (no appearance).
-- [ ] **Modal/Drawer** — one scrim (`--scrim`), one shadow
-      (`--overlay-shadow`), one hairline; never stacked. Dialog: 6px
-      radius, display-face 16px title.
-- [ ] **Spinner** — 1.5px ring, currentColor top-transparent, .7s linear.
-- [ ] **CopyButton** — IDs middle-truncate in mono and copy on click.
+- [x] **EmptyState** — the telegram (display heading, one action, fine print). (2026-07-29)
+- [x] **ErrorState** — triangle voice + recoverable in place. (2026-07-29)
+- [x] **Input/Select/Field** — mono 13, 2px radius, drawn chevron. (2026-07-29)
+- [x] **Modal/Drawer** — one scrim, one shadow, one hairline. (2026-07-29)
+- [x] **Spinner** — 1.5px currentColor ring. (2026-07-29)
+- [x] **CopyButton** — mono, copies on click. (2026-07-29)
 
 ## 3. Missing components the canvases require (console blockers)
 
