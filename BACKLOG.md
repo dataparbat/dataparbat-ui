@@ -79,8 +79,6 @@ consumer exists.
 
 ## 5. Consumers
 
-- legacy-app + www: PINNED to the pre-migration kit (git SHA / lockfile) —
-  they stay on the old language until the website redesign; do not chase.
 - First consumer of the migrated kit: the console build. Blocked on §1–§3.
 
 ## Phone idioms (ruling 58 — each primitive carries its own, once)
