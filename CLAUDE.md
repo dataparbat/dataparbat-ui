@@ -14,7 +14,7 @@ must be traceable to a canvas or the rulings ledger
 - Classes are `dp-`prefixed canvas names.
 - Tokens (`--color-*`, `--font-*`, `--radius-*`) are the ONLY theming API.
   The kit ships NEUTRAL values (`default-theme.css`); real values live in
-  `@dataparbat/theme` (dataparbat repo) — two layers: `h-*` house chrome
+  `@dataparbat/theme` (the sibling `theme/` repo) — two layers: `h-*` house chrome
   constant, unprefixed product layer + accent pack per product. The kit
   never imports a theme.
 - Light-first; dark pairs via `prefers-color-scheme` AND `[data-theme]`.
